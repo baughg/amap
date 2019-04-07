@@ -5,6 +5,7 @@
 #include <iostream>
 #include <vector>
 #include <fstream>
+#include  <iomanip>
 
 int main()
 {
@@ -40,11 +41,13 @@ int main()
 		histogram_prop[addr]++;
 		cut_assignment_prop[a >> 4] = addr;
 
-		cut_to_address_map
+		cut_to_address_map			
+			<< std::setfill('0') << std::setw(5)
 			<< std::hex
 			<< a << ","
 			<< addr_7b << ","
 			<< addr_offset << ","
+			<< std::dec
 			<< cut_assignment[a >> 4] << ","
 			<< cut_assignment_prop[a >> 4]
 			<< std::endl;

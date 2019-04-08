@@ -41,9 +41,7 @@ int main()
 		histogram_prop[addr]++;
 		cut_assignment_prop[a >> 4] = addr;
 
-		cut_to_address_map			
-			<< std::setfill('0') << std::setw(5)
-			<< std::hex
+		cut_to_address_map		
 			<< a << ","
 			<< addr_7b << ","
 			<< addr_offset << ","
@@ -51,8 +49,7 @@ int main()
 			<< cut_assignment[a >> 4] << ","
 			<< cut_assignment_prop[a >> 4]
 			<< std::endl;
-
-	}
+    }
 
 	cut_to_address_map.close();
 }
